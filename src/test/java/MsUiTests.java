@@ -149,7 +149,7 @@ public class MsUiTests {
             driver.findElement(By.xpath("//a[@title='00003']")).isDisplayed();
         }
         catch (NoSuchElementException e) {
-            RemapAccess.productPost(credentials);
+            //RemapAccess.productPost(credentials);
             RemapAccess.customerOrderPost(credentials);
         }
 
