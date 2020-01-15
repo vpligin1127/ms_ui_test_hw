@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5f319d6d-5ba0-4981-8c5a-81606776b23a" name="Default Changelist" comment="" />
+    <list default="true" id="5f319d6d-5ba0-4981-8c5a-81606776b23a" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/MsUiTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/lognex/uitests/MsUiTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/RemapAccess.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/lognex/uitests/RemapAccess.java" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -33,10 +37,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/test/java/MsUiTests.java">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/lognex/uitests/MsUiTests.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="344">
-              <caret line="151" column="14" selection-start-line="151" selection-start-column="14" selection-end-line="151" selection-end-column="14" />
+            <state relative-caret-position="2535">
+              <caret line="169" column="25" selection-start-line="169" selection-start-column="25" selection-end-line="169" selection-end-column="25" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -45,10 +49,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/RemapAccess.java">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/lognex/uitests/RemapAccess.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="32" column="34" selection-start-line="32" selection-start-column="29" selection-end-line="32" selection-end-column="34" />
+            <state relative-caret-position="195">
+              <caret line="13" column="17" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -75,6 +79,8 @@
         <option value="$PROJECT_DIR$/src/test/java/RemapAccess.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/test/java/MsUiTests.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/lognex/uitests/MsUiTests.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/lognex/uitests/RemapAccess.java" />
       </list>
     </option>
   </component>
@@ -116,6 +122,12 @@
               <item name="ms_ui_test_hw" type="b2602c69:ProjectViewProjectNode" />
               <item name="ms_ui_test_hw" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ms_ui_test_hw" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ms_ui_test_hw" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -124,6 +136,14 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ms_ui_test_hw" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ms_ui_test_hw" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="uitests" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -155,27 +175,17 @@
   <component name="RunManager" selected="JUnit.MsUiTests">
     <configuration name="MsUiTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ms_ui_test_hw" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="MsUiTests" />
+      <option name="PACKAGE_NAME" value="com.lognex.uitests" />
+      <option name="MAIN_CLASS_NAME" value="com.lognex.uitests.MsUiTests" />
       <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MsUiTests.changePassword" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="ms_ui_test_hw" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="MsUiTests" />
-      <option name="METHOD_NAME" value="changePassword" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <configuration name="MsUiTests.createProduct" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ms_ui_test_hw" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="MsUiTests" />
+      <option name="PACKAGE_NAME" value="com.lognex.uitests" />
+      <option name="MAIN_CLASS_NAME" value="com.lognex.uitests.MsUiTests" />
       <option name="METHOD_NAME" value="createProduct" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
@@ -184,8 +194,8 @@
     </configuration>
     <configuration name="MsUiTests.customerOrderTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ms_ui_test_hw" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="MsUiTests" />
+      <option name="PACKAGE_NAME" value="com.lognex.uitests" />
+      <option name="MAIN_CLASS_NAME" value="com.lognex.uitests.MsUiTests" />
       <option name="METHOD_NAME" value="customerOrderTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
@@ -194,9 +204,25 @@
     </configuration>
     <configuration name="MsUiTests.registrationTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ms_ui_test_hw" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="MsUiTests" />
+      <option name="PACKAGE_NAME" value="com.lognex.uitests" />
+      <option name="MAIN_CLASS_NAME" value="com.lognex.uitests.MsUiTests" />
       <option name="METHOD_NAME" value="registrationTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MsUiTests.testRegistration" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ms_ui_test_hw" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.lognex.uitests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.lognex.uitests" />
+      <option name="MAIN_CLASS_NAME" value="com.lognex.uitests.MsUiTests" />
+      <option name="METHOD_NAME" value="testRegistration" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -205,10 +231,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.MsUiTests" />
+        <item itemvalue="JUnit.MsUiTests.testRegistration" />
         <item itemvalue="JUnit.MsUiTests.customerOrderTest" />
         <item itemvalue="JUnit.MsUiTests.registrationTest" />
         <item itemvalue="JUnit.MsUiTests.createProduct" />
-        <item itemvalue="JUnit.MsUiTests.changePassword" />
       </list>
     </recent_temporary>
   </component>
@@ -226,34 +252,34 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="MsUiTests - 2020.01.08 at 22h 18m 02s.xml">
+    <history-entry file="MsUiTests_testRegistration - 2020.01.15 at 21h 59m 51s.xml">
+      <configuration name="MsUiTests.testRegistration" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MsUiTests - 2020.01.15 at 22h 01m 01s.xml">
       <configuration name="MsUiTests" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="MsUiTests - 2020.01.08 at 22h 25m 54s.xml">
+    <history-entry file="MsUiTests - 2020.01.15 at 22h 42m 23s.xml">
       <configuration name="MsUiTests" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="MsUiTests_customerOrderTest - 2020.01.08 at 22h 34m 22s.xml">
-      <configuration name="MsUiTests.customerOrderTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="MsUiTests - 2020.01.08 at 22h 37m 56s.xml">
+    <history-entry file="MsUiTests - 2020.01.15 at 22h 46m 06s.xml">
       <configuration name="MsUiTests" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="MsUiTests - 2020.01.08 at 22h 44m 00s.xml">
+    <history-entry file="MsUiTests - 2020.01.15 at 23h 56m 18s.xml">
       <configuration name="MsUiTests" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="MsUiTests - 2020.01.08 at 22h 54m 41s.xml">
+    <history-entry file="MsUiTests - 2020.01.16 at 00h 08m 01s.xml">
       <configuration name="MsUiTests" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="MsUiTests - 2020.01.08 at 23h 01m 09s.xml">
+    <history-entry file="MsUiTests - 2020.01.16 at 00h 29m 12s.xml">
       <configuration name="MsUiTests" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="MsUiTests - 2020.01.08 at 23h 04m 15s.xml">
+    <history-entry file="MsUiTests - 2020.01.16 at 00h 31m 05s.xml">
       <configuration name="MsUiTests" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="MsUiTests - 2020.01.08 at 23h 14m 48s.xml">
+    <history-entry file="MsUiTests - 2020.01.16 at 00h 32m 11s.xml">
       <configuration name="MsUiTests" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="MsUiTests - 2020.01.08 at 23h 16m 29s.xml">
+    <history-entry file="MsUiTests - 2020.01.16 at 00h 36m 49s.xml">
       <configuration name="MsUiTests" configurationId="JUnit" />
     </history-entry>
   </component>
@@ -269,7 +295,7 @@
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3288948" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32756326" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39946738" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -336,20 +362,20 @@
     <entry file="file://$PROJECT_DIR$/ms_ui_test_hw.iml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/RemapAccess.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/lognex/uitests/RemapAccess.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="32" column="34" selection-start-line="32" selection-start-column="29" selection-end-line="32" selection-end-column="34" />
+        <state relative-caret-position="195">
+          <caret line="13" column="17" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/MsUiTests.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/lognex/uitests/MsUiTests.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="344">
-          <caret line="151" column="14" selection-start-line="151" selection-start-column="14" selection-end-line="151" selection-end-column="14" />
+        <state relative-caret-position="2535">
+          <caret line="169" column="25" selection-start-line="169" selection-start-column="25" selection-end-line="169" selection-end-column="25" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
