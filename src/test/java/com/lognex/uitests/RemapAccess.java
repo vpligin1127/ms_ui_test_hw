@@ -1,3 +1,5 @@
+package com.lognex.uitests;
+
 import org.json.JSONArray;
 import org.json.JSONObject;
 import org.json.JSONTokener;
@@ -9,7 +11,7 @@ import java.io.OutputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
-
+//Не используется
 public class RemapAccess {
 
     public static void productPost(String credentials) throws IOException {
