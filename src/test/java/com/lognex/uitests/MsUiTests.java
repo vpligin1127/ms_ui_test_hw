@@ -9,89 +9,50 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import java.util.Random;
-
 import static org.junit.Assert.assertFalse;
+
+import static com.lognex.uitests.Controls.*;
 
 public class MsUiTests {
 
+
     @Test
     public void testRegistration() throws InterruptedException {
-        //Проверяем вход в аккаунт. Регистрируемся со случайным именем
 
         WebDriver driver = new ChromeDriver();
-        driver.get("https://online-api-4.testms.lognex.ru");
-        //Формируем логин и пароль
-        String login = String.format("v%d", new Random().nextInt(100));
-        String password = "123123";
+        WebDriverWait waitLoad = new WebDriverWait(driver, 3000);
 
-        //Формируем шифрованную строку для http-запросов по Remap (не используется)
-        //String originalInput = login+":"+password;
-        //String credentials = "Basic "+ Base64.getEncoder().encodeToString(originalInput.getBytes());
+        //Проверяем вход в аккаунт. Регистрируемся со случайным именем
+        RegPage registration = new RegPage(driver, waitLoad);
 
-        //Регистрируемся
-        goRegister(driver, login);
+        registration.goRegister();
 
         Thread.sleep(10000);
 
         //Проверяем, что находимся на стартовой странице, если нет - тест не проходит.
         try {
-            driver.findElement(By.xpath("//div[@class='login-new']"));
+            findElement(driver, "//div[@class='login-new']");
         } catch (NoSuchElementException e) {
             assertFalse("Регистрация не проходит!", true);
         }
 
         //Меняем пароль
-        changePassword(driver, password);
+        registration.changePassword();
 
         //Проверяем есть ли продукт мандарины, если нет - создаем
-        testCreateProduct(driver);
+        //testCreateProduct(driver);
 
         //Проверяем, есть ли заказ покупателя, если нет - создаем
-        testCustomerOrder(driver);
+        //testCustomerOrder(driver);
 
     }
 
 
-    public void goRegister(WebDriver driver, String login) {
-        WebDriverWait waitLoad = new WebDriverWait(driver, 3000);
-        waitLoad.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@id='lable-login']")));
-
-        driver.findElement(By.id("reglink")).click();
-
-        waitLoad.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@id='email']")));
-        WebElement emailInput = driver.findElement(By.xpath("//input[@id='email']"));
-        emailInput.sendKeys("vpligin@moysklad.ru");
-
-        WebElement companyInput = driver.findElement(By.xpath("//div[@class='wrapper']//*[@id = 'company']"));
-        companyInput.sendKeys(login);
-
-        driver.findElement(By.xpath("//button[@id='submit']")).click();
 
 
-    }
 
-    public void changePassword(WebDriver driver, String password) {
-        //зайти в Настройки - Сотрудники
-        WebDriverWait waitLoad = new WebDriverWait(driver, 3000);
-        waitLoad.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@class='login-new']")));
-        driver.findElement(By.xpath("//table[@title='Аккаунт']")).click();
-        driver.findElement(By.xpath("//div[contains(@class, 'user-menu-popup-button')]//td[text()='Настройки']")).click();
-        driver.findElement(By.xpath("//a[contains(@class,'sidebar-menu')][span[@title='Сотрудники']]")).click();
 
-        waitLoad.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@title='vpligin@moysklad.ru']")));
-        driver.findElement(By.xpath("//div[@title='vpligin@moysklad.ru']")).click();
 
-        //Ввести в два поля ввода пароль 123123 и нажать на кнопку сохранить
-        waitLoad.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@type='password']")));
-        WebElement passwordInput = driver.findElement(By.xpath("(//input[@type='password'])[1]"));
-        passwordInput.sendKeys(password);
-
-        WebElement passwordCheckInput = driver.findElement(By.xpath("(//input[@type='password'])[2]"));
-        passwordCheckInput.sendKeys(password);
-
-        driver.findElement(By.xpath("//span[text()='Сохранить']/ancestor::div[@role='button']")).click();
-    }
 
 
     public void testCreateProduct(WebDriver driver) throws InterruptedException {

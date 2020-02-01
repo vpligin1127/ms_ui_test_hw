@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5f319d6d-5ba0-4981-8c5a-81606776b23a" name="Default Changelist" comment="" />
+    <list default="true" id="5f319d6d-5ba0-4981-8c5a-81606776b23a" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/lognex/uitests/MsUiTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/lognex/uitests/MsUiTests.java" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -32,11 +35,23 @@
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/lognex/uitests/MsUiTests.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="151">
-              <caret line="16" selection-start-line="16" selection-end-line="16" />
+            <state relative-caret-position="3">
+              <caret line="33" column="43" selection-start-line="33" selection-start-column="43" selection-end-line="33" selection-end-column="43" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/lognex/uitests/RegPage.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="900">
+              <caret line="60" selection-start-line="60" selection-end-line="60" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -45,12 +60,18 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/com/lognex/uitests/RemapAccess.java">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/lognex/uitests/Controls.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="13" column="17" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
+            <state relative-caret-position="255">
+              <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#509#510#0" expanded="true" />
+                <element signature="e#560#561#0" expanded="true" />
+                <element signature="e#372#373#0" expanded="true" />
+                <element signature="e#425#426#0" expanded="true" />
+                <element signature="e#621#622#0" expanded="true" />
+                <element signature="e#680#681#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -76,6 +97,8 @@
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/test/java/MsUiTests.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/lognex/uitests/RemapAccess.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/lognex/uitests/RegPage.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/lognex/uitests/Controls.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/lognex/uitests/MsUiTests.java" />
       </list>
     </option>
@@ -97,6 +120,7 @@
     </navigator>
     <panes>
       <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -145,7 +169,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -168,7 +191,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.MsUiTests">
+  <component name="RunManager" selected="JUnit.MsUiTests.testRegistration">
     <configuration name="MsUiTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ms_ui_test_hw" />
       <option name="PACKAGE_NAME" value="com.lognex.uitests" />
@@ -226,8 +249,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.MsUiTests" />
         <item itemvalue="JUnit.MsUiTests.testRegistration" />
+        <item itemvalue="JUnit.MsUiTests" />
         <item itemvalue="JUnit.MsUiTests.customerOrderTest" />
         <item itemvalue="JUnit.MsUiTests.registrationTest" />
         <item itemvalue="JUnit.MsUiTests.createProduct" />
@@ -248,35 +271,35 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="MsUiTests_testRegistration - 2020.01.15 at 21h 59m 51s.xml">
-      <configuration name="MsUiTests.testRegistration" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="MsUiTests - 2020.01.15 at 22h 01m 01s.xml">
-      <configuration name="MsUiTests" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="MsUiTests - 2020.01.15 at 22h 42m 23s.xml">
-      <configuration name="MsUiTests" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="MsUiTests - 2020.01.15 at 22h 46m 06s.xml">
-      <configuration name="MsUiTests" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="MsUiTests - 2020.01.15 at 23h 56m 18s.xml">
-      <configuration name="MsUiTests" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="MsUiTests - 2020.01.16 at 00h 08m 01s.xml">
-      <configuration name="MsUiTests" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="MsUiTests - 2020.01.16 at 00h 29m 12s.xml">
-      <configuration name="MsUiTests" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="MsUiTests - 2020.01.16 at 00h 31m 05s.xml">
-      <configuration name="MsUiTests" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="MsUiTests - 2020.01.16 at 00h 32m 11s.xml">
       <configuration name="MsUiTests" configurationId="JUnit" />
     </history-entry>
     <history-entry file="MsUiTests - 2020.01.16 at 00h 36m 49s.xml">
       <configuration name="MsUiTests" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MsUiTests_testRegistration - 2020.02.01 at 11h 56m 06s.xml">
+      <configuration name="MsUiTests.testRegistration" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MsUiTests_testRegistration - 2020.02.01 at 11h 59m 10s.xml">
+      <configuration name="MsUiTests.testRegistration" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MsUiTests_testRegistration - 2020.02.01 at 12h 02m 36s.xml">
+      <configuration name="MsUiTests.testRegistration" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MsUiTests_testRegistration - 2020.02.01 at 12h 11m 54s.xml">
+      <configuration name="MsUiTests.testRegistration" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MsUiTests_testRegistration - 2020.02.01 at 12h 13m 14s.xml">
+      <configuration name="MsUiTests.testRegistration" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MsUiTests_testRegistration - 2020.02.01 at 12h 16m 55s.xml">
+      <configuration name="MsUiTests.testRegistration" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MsUiTests_testRegistration - 2020.02.01 at 12h 56m 19s.xml">
+      <configuration name="MsUiTests.testRegistration" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MsUiTests_testRegistration - 2020.02.01 at 13h 02m 04s.xml">
+      <configuration name="MsUiTests.testRegistration" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
@@ -291,13 +314,13 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3288948" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32756326" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32756326" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39946738" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" weight="0.3288948" />
+      <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" weight="0.32756326" />
       <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.32756326" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -357,9 +380,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ms_ui_test_hw.iml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="450">
@@ -367,17 +387,39 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/lognex/uitests/RegPage.java">
+    <entry file="file://$PROJECT_DIR$/ms_ui_test_hw.iml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/lognex/uitests/Controls.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="20" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="20" />
+        <state relative-caret-position="255">
+          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#509#510#0" expanded="true" />
+            <element signature="e#560#561#0" expanded="true" />
+            <element signature="e#372#373#0" expanded="true" />
+            <element signature="e#425#426#0" expanded="true" />
+            <element signature="e#621#622#0" expanded="true" />
+            <element signature="e#680#681#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/lognex/uitests/MsUiTests.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="151">
-          <caret line="16" selection-start-line="16" selection-end-line="16" />
+        <state relative-caret-position="3">
+          <caret line="33" column="43" selection-start-line="33" selection-start-column="43" selection-end-line="33" selection-end-column="43" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/lognex/uitests/RegPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="900">
+          <caret line="60" selection-start-line="60" selection-end-line="60" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
