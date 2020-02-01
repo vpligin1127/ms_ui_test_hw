@@ -1,17 +1,14 @@
 package com.lognex.uitests;
 
 import org.junit.Test;
-import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import static com.lognex.uitests.Controls.clickElementXpath;
+import static com.lognex.uitests.Controls.findElement;
 import static org.junit.Assert.assertFalse;
-
-import static com.lognex.uitests.Controls.*;
 
 public class MsUiTests {
 
@@ -27,7 +24,7 @@ public class MsUiTests {
 
         registration.goRegister();
 
-        Thread.sleep(10000);
+        Thread.sleep(13000);
 
         //Проверяем, что находимся на стартовой странице, если нет - тест не проходит.
         try {
@@ -39,126 +36,74 @@ public class MsUiTests {
         //Меняем пароль
         registration.changePassword();
 
-        //Проверяем есть ли продукт мандарины, если нет - создаем
-        //testCreateProduct(driver);
-
-        //Проверяем, есть ли заказ покупателя, если нет - создаем
-        //testCustomerOrder(driver);
+        driver.quit();
 
     }
 
-
-
-
-
-
-
-
-
-    public void testCreateProduct(WebDriver driver) throws InterruptedException {
-
-        //Проверяем, что есть товар "мандарины". Если нет, то создаем его вручную
+    @Test
+    public void testCreateProduct() throws InterruptedException {
+        WebDriver driver = new ChromeDriver();
         WebDriverWait waitLoad = new WebDriverWait(driver, 3000);
-        waitLoad.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@class='login-new']")));
 
-        //Заходим на вкладку Товары - Товары и услуги
-        driver.findElement(By.xpath("//span[@title='Товары']/ancestor::table[contains(@class, 'menu-item')]")).click();
+        CreateProduct productCreation = new CreateProduct(driver, waitLoad);
 
-        waitLoad.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[@title='Товары и услуги']")));
-        driver.findElement(By.xpath("//span[@title='Товары и услуги']")).click();
+        productCreation.goRegister();
 
-        //Проверяем, есть ли мадарины, если нет - создаем, вызвав метод
+        Thread.sleep(13000);
+
+        //Проверяем, что находимся на стартовой странице, если нет - тест не проходит.
         try {
-            driver.findElement(By.xpath("//div[@title='мандарины']")).isDisplayed();
+            findElement(driver, "//div[@class='login-new']");
+        } catch (NoSuchElementException e) {
+            assertFalse("Регистрация не проходит!", true);
         }
-        catch (NoSuchElementException e) {
-            goCreateProductUI(driver);
+
+        if (!productCreation.checkProduct()) {
+            productCreation.createProduct();
         }
 
         //Обновляем список товаров
-        driver.findElement(By.xpath("//img[@class='b-tool-button']")).click();
+        clickElementXpath(driver, "//img[@class='b-tool-button']");
         Thread.sleep(2000);
 
-        //Проверяем снова
-        try {
-            driver.findElement(By.xpath("//div[@title='мандарины']")).isDisplayed();
-        }
-        catch (NoSuchElementException e) {
-            assertFalse("Товар не создался", true);
-        }
+        assertFalse("Товар не создается!", productCreation.checkProduct());
 
+        driver.quit();
     }
 
-    public void goCreateProductUI(WebDriver driver) throws InterruptedException {
-        driver.findElement(By.xpath("//div[@role='button'][descendant::span[text()='Товар']]")).click();
-        Thread.sleep(2000);
 
-        WebElement productName = driver.findElement(By.xpath(
-                "//tr[@class='tutorial-stage-sales-fourth-step']//input[@type='text']"));
-        productName.sendKeys("мандарины");
-
-        driver.findElement(By.xpath("//div[@role='button']/descendant::span[text()='Сохранить']")).click();
-        Thread.sleep(2000);
-        driver.findElement(By.xpath("//div[@role='button']/descendant::span[text()='Закрыть']")).click();
-
-
-    }
-
-    //@Test
-    public void testCustomerOrder(WebDriver driver) throws InterruptedException {
-        //Проверяем, что создан заказ покупателя. Если нет, то создаем через UI
+    @Test
+    public void testCustomerOrder() throws InterruptedException {
+        WebDriver driver = new ChromeDriver();
         WebDriverWait waitLoad = new WebDriverWait(driver, 3000);
-        waitLoad.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@class='login-new']")));
 
-        //Заходим на вкладку Продажи - Заказы покупателей
-        driver.findElement(By.xpath("//span[@title='Продажи']/ancestor::table[contains(@class, 'menu-item')]")).click();
+        CreateOrder orderCreation = new CreateOrder(driver, waitLoad);
 
-        waitLoad.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[@title='Заказы покупателей']")));
-        driver.findElement(By.xpath("//span[@title='Заказы покупателей']")).click();
+        orderCreation.goRegister();
+        Thread.sleep(13000);
 
-        //Проверяем, есть ли хоть один заказ, если нет - создаем
+        //Проверяем, что находимся на стартовой странице, если нет - тест не проходит.
         try {
-            driver.findElement(By.xpath("//a[contains(@href, '#customerorder')]")).isDisplayed();
-        }
-        catch (NoSuchElementException e) {
-            goCreateCustomerorderUI(driver);
+            findElement(driver, "//div[@class='login-new']");
+        } catch (NoSuchElementException e) {
+            assertFalse("Регистрация не проходит!", true);
         }
 
-        //Обновляем заказы
-        driver.findElement(By.xpath("//img[@class='b-tool-button']")).click();
+        orderCreation.createProduct();
+
+        if (!orderCreation.checkOrder()) {
+            orderCreation.createOrder();
+        }
+
+        //Обновляем список заказов
+        clickElementXpath(driver, "//img[@class='b-tool-button']");
         Thread.sleep(2000);
 
-        //Проверяем снова
-        try {
-            driver.findElement(By.xpath("//a[contains(@href, '#customerorder')]")).isDisplayed();
-        }
-        catch (NoSuchElementException e) {
-            assertFalse("Заказ не создался", true);
-        }
+        assertFalse("Заказ не создается!", orderCreation.checkOrder());
 
-
-
+        driver.quit();
 
     }
 
-    public void goCreateCustomerorderUI(WebDriver driver) throws InterruptedException {
-        driver.findElement(By.xpath("//div[@role='button'][descendant::span[text()='Заказ']]")).click();
-        Thread.sleep(2000);
-
-        driver.findElement(
-                By.xpath(
-                        "(//td[@class='widget']//div[@class='load-button tutorial-selector-image'])[4]")).click();
-        Thread.sleep(2000);
-        driver.findElement(By.xpath("//div[@class='popupContent']//div[@title='ООО \"Покупатель\"']")).click();
-
-        WebElement productInput = driver.findElement(By.xpath("//input[contains(@placeholder, 'Добавить позицию')]"));
-        productInput.sendKeys("мандарины");
-        Thread.sleep(2000);
-
-        driver.findElement(By.xpath("//div[@class='popupContent']//span[text()='мандарины']")).click();
-
-        driver.findElement(By.xpath("//div[@role='button'][descendant::span[text()='Сохранить']]")).click();
-        Thread.sleep(2000);
-        driver.findElement(By.xpath("//div[@role='button'][descendant::span[text()='Закрыть']]")).click();
-    }
 }
+

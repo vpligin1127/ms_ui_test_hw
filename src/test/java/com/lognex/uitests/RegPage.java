@@ -3,11 +3,9 @@ package com.lognex.uitests;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import java.util.Random;
-
 import static com.lognex.uitests.Controls.*;
 
-class RegPage {
+class RegPage extends AbstractPage {
 
     RegPage(WebDriver driver, WebDriverWait waitLoad) {
         this.driver = driver;
@@ -15,34 +13,13 @@ class RegPage {
 
     }
 
-    WebDriver driver;
-    WebDriverWait waitLoad;
-
-    private String urlToGo = "https://online-api-4.testms.lognex.ru";
-    private String login = String.format("v%d", new Random().nextInt(100));
     private String password = "123123";
-
-
-    void goRegister() {
-
-        driver.get(urlToGo);
-
-        expectElement(waitLoad, "//input[@id='lable-login']");
-        clickElementId(driver,"reglink");
-
-        expectElement(waitLoad,"//input[@id='email']");
-
-        fillElement(driver,"//input[@id='email']", "vpligin@moysklad.ru");
-        fillElement(driver, "//div[@class='wrapper']//*[@id = 'company']", login);
-
-        clickElementId(driver,"submit");
-
-    }
 
 
     public void changePassword() throws InterruptedException {
         //зайти в Настройки - Сотрудники
         expectElement(waitLoad,"//div[@class='login-new']");
+
         clickElementXpath(driver,"//table[@title='Аккаунт']");
         clickElementXpath(driver,"//div[contains(@class, 'user-menu-popup-button')]//td[text()='Настройки']");
         clickElementXpath(driver,"//a[contains(@class,'sidebar-menu')][span[@title='Сотрудники']]");
